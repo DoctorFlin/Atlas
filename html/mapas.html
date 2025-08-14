@@ -12,10 +12,18 @@
         /* Container que segura a imagem do mapa */
         .mapa-container {
             position: relative;
-            width: 100%; /* ✅ Agora vai se adaptar à tela */
-            max-width: 800px; /* ✅ Mantém limite no desktop */
-            margin: 0 auto;
+            width: 800px;      /* 🔹 Fixo no desktop */
+            margin: 0 auto;    /* Centraliza */
 }
+
+/* Somente no mobile (máx. 768px de largura de tela) */
+@media (max-width: 768px) {
+    .mapa-container {
+            width: 100%;       /* Ocupa toda a largura disponível */
+            max-width: 800px;  /* Não ultrapassa 800px */
+    }
+}
+
 
 
         /* Imagem do mapa */
