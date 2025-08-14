@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa do Mundo</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
+
 
     <style>
         /* Container que segura a imagem do mapa */
         .mapa-container {
-            position: relative; /* Necessário para posicionar os marcadores em relação à imagem */
-            width: 800px; /* Tamanho fixo do mapa (pode mudar para % se quiser responsivo) */
-            margin: 0 auto; /* Centraliza o mapa na tela */
-        }
+            position: relative;
+            width: 100%; /* ✅ Agora vai se adaptar à tela */
+            max-width: 800px; /* ✅ Mantém limite no desktop */
+            margin: 0 auto;
+}
+
 
         /* Imagem do mapa */
         .mapa-container img {
@@ -70,7 +74,7 @@
     <header>
         <h1>Mapa do Mundo</h1>
         <nav>
-            <a href="index.html">Início</a>
+            <a href="../index.html">Início</a>
             <a href="personagens.html">Personagens</a>
             <a href="mapas.html">Mapas</a>
         </nav>

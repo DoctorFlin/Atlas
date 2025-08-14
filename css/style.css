@@ -27,3 +27,60 @@ footer {
     padding: 10px;
     text-align: center;
 }
+
+nav a.active {
+    color: yellow;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* ====== ADIÇÕES PARA RESPONSIVIDADE ====== */
+
+/* Faz imagens se ajustarem ao tamanho da tela (ex.: mapa) */
+img {
+    max-width: 100%; /* Nunca ultrapassa a largura do container */
+    height: auto;    /* Mantém a proporção */
+}
+
+/* Ajustes para telas médias (tablets e celulares na horizontal) */
+@media (max-width: 768px) {
+    nav {
+        display: flex;          /* Transforma o menu em flexbox */
+        flex-wrap: wrap;        /* Permite que links quebrem para a próxima linha */
+        justify-content: center;/* Centraliza os links */
+    }
+
+    nav a {
+        margin: 5px;            /* Reduz margens entre links */
+        font-size: 14px;        /* Diminui o tamanho da fonte */
+    }
+
+    header h1 {
+        font-size: 20px;        /* Reduz título no mobile */
+    }
+
+    main {
+        padding: 15px;          /* Reduz espaçamento interno */
+    }
+
+    /* Caso exista um container fixo para o mapa */
+    .mapa-container {
+        width: 100% !important; /* Faz o mapa ocupar toda a largura disponível */
+    }
+}
+
+/* Ajustes para telas muito pequenas (celulares na vertical) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 18px; /* Reduz ainda mais o tamanho do título */
+    }
+
+    nav a {
+        font-size: 13px; /* Deixa o texto dos links mais compacto */
+    }
+
+    footer {
+        font-size: 12px; /* Deixa o rodapé mais compacto */
+    }
+}
+
